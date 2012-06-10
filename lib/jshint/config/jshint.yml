@@ -1,0 +1,43 @@
+# ------------ rake task options ------------
+
+# JS files to check by default, if no parameters are passed to rake jshint
+# (you may want to limit this only to your own scripts and exclude any external scripts and frameworks)
+
+# this can be overridden by adding 'paths' and 'exclude_paths' parameter to rake command:
+#   rake jshint paths=path1,path2,... exclude_paths=library1,library2,...
+
+paths:
+  - public/javascripts/**/*.js
+
+exclude_paths:
+  - public/javascripts/vendor/**/*.js
+
+
+# ------------ jshint options ------------
+# see http://jshint.com/#docs for more detailed explanations
+
+asi:      true  # If true, JSHint will tolerate the use of automatic semicolon insertion.
+bitwise:  true  # If true, JSHint will prohibit the use of bitwise operators
+boss:     true  # If true, JSHint will allow the use of assignments inside structured elements such as if, for and while.
+curly:    true  # If true, JSHint will require that you always use blocks with structured elements such as if and while.
+debug:    true  # If true, JSHint will allow the usage of debugger statements, which are used to set breakpoints in modern browsers.
+eqeqeq:   true  # If true, JSHint will require that you use === and !== for all comparisons.
+eqnull:   true  # If true, JSHint will allow the use of == null.
+evil:     true  # If true, JSHint will allow the use of eval.
+forin:    true  # If true, JSHint will allow the use of for in without hasOwnProperty.
+immed:    true  # If true, JSHint will require immediate invocations to be wrapped in parens.
+laxbreak: true  # If true, JSHint will not check line breaks.
+maxerr:   50    # This option is used to specify maximum number of errors before JSHint stops processing your source. Default value is 50.
+newcap:   true  # If true, JSHint will require that you capitalize all constructor functions.
+noarg:    true  # If true, JSHint will prohibit the use of arguments.caller and arguments.callee.
+noempty:  true  # If true, JSHint will prohibit the use of empty blocks.
+nonew:    true  # If true, JSHint will prohibit the use of constructors for side-effects.
+nomen:    true  # If true, JSHint will disallow the use of initial or trailing underbars in names.
+onevar:   true  # If true, JSHint will allow only one var statement per function.
+passfail: true  # If true, JSHint will stop on the first error it encounters.
+plusplus: true  # If true, JSHint will prohibit the use of increment and decrement operators.
+regexp:   true  # If true, JSHint will disallow . and [^...] in regular expressions.
+undef:    true  # If true, JSHint will require all non-global variables be declared before they are used.
+sub:      true  # If true, JSHint will tolerate all forms of subscript notation.
+strict:   true  # If true, JSHint will require you to use "use strict"; pragma.
+white:    true  # If true, JSHint will check your code against strict whitespace rules
